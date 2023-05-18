@@ -3,8 +3,6 @@
   {%- assign video_id = video_id[1] | split: '&' | first -%}
   <div
     id="YouTubeVideo-{{ section_id }}"
-    class="video-div"
-    data-type="youtube"
     data-video-id="{{ video_id }}"></div>
 {%- endif -%}
 
@@ -13,8 +11,6 @@
   {%- assign video_id = video_id[1] | split: '&' | first -%}
   <div
     id="YouTubeVideo-{{ section_id }}"
-    class="video-div"
-    data-type="youtube"
     data-video-id="{{ video_id }}"></div>
 {%- endif -%}
 
@@ -26,16 +22,12 @@
   </button>
   <div
     id="Vimeo-{{ section_id }}"
-    class="video-div"
-    data-type="vimeo"
     data-video-id="{{ video_id }}"></div>
 {%- endif -%}
 
 {%- if url contains '.mp4' or url contains '.MP4' -%}
   <video
     id="Mp4Video-{{ section_id }}"
-    class="video-div"
-    data-type="mp4"
     src="{{ url }}"
     loop muted playsinline autoplay></video>
 {%- endif -%}
